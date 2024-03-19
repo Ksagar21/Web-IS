@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+    <title>Add Product</title>
+</head>
+<body>
+    <h1>Add Product</h1>
+    <form method="POST" action="{{ url_for('add_product') }}">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="description">Description:</label><br>
+        <input type="text" id="description" name="description"><br>
+        <label for="price">Price:</label><br>
+        <input type="text" id="price" name="price"><br>
+        <label for="category_id">Category ID:</label><br>
+        <input type="text" id="category_id" name="category_id"><br>
+        <label for="image_url">Image URL:</label><br>
+        <input type="text" id="image_url" name="image_url"><br>
+        <input type="submit" value="Add Product">
+    </form>
+</body>
+</html>
